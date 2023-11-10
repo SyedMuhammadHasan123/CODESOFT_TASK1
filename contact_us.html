@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact_Us</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.20.0/jquery.validate.min.js"
+        integrity="sha512-WMEKGZ7L5LWgaPeJtw9MBM4i5w5OSBlSjTjCtSnvFJGSVD26gE5+Td12qN5pvWXhuWaWcVwF++F7aqu9cvqP0A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+</head>
+
+<body>
+    <div class="header2">
+        <div class="container">
+            <div class="navbar">
+                <div class="logo">
+                    <img src="images/logo.png" width="125px">
+                </div>
+                <nav>
+                    <ul id="menuItems">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="product.html">Products</a></li>
+                        <li><a href="About_us.html">About</a></li>
+                        <li><a href="contact_us.html">Contact</a></li>
+                        <li><a href="cart.html">Account</a></li>
+                    </ul>
+                </nav>
+                <img src="images/cart.png" width="30px" height="30px">
+                <img src="images/menu.png" class="menu-icon" onclick="menutoggle()">
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Contact Us page -->
+    <div class="cntcontainer">
+        <div class="left_cont">
+            <h1 style="  color: #ff523b;;">Let's talk about <br> everything!</h1><br>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas debitis, fugit natus?</p>
+            <img src="images/cntus.PNG">
+        </div>
+        <div class="right_cont">
+            <div class="forms">
+                <form action="#" method="post" id="myForm">
+                    <input type="text" id="name" name="name" placeholder="Your name">
+
+                    <label for="email"></label>
+                    <input type="email" id="email" name="email" placeholder="Email" required>
+
+                    <label for="subject"></label>
+                    <input type="text" id="subject" name="subject" placeholder="Subject" required>
+
+                    <label for="message"></label>
+                    <textarea id="message" name="message" placeholder="Message" required></textarea>
+
+                    <button type="submit" class="submit-button">Send message</button>
+            </div>
+        </div>
+    </div>
+
+
+    <!------footer------->
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col-1">
+                    <h3>Download Our App</h3>
+                    <p>Download App for Android and ios mobile phone</p>
+                    <div class="app-logo">
+                        <img src="images/play-store.png">
+                        <img src="images/app-store.png">
+                    </div>
+                </div>
+                <div class="footer-col-2">
+                    <img src="images/logo-white.png">
+                    <p> Our purpose is to sustainably Make the pleasure and
+                        benifit pf sports accessibleto the many.</p>
+                </div>
+                <div class="footer-col-3">
+                    <h3>Useful Links</h3>
+                    <ul>
+                        <li>Coupons</li>
+                        <li>blog Post</li>
+                        <li>Return Policy</li>
+                        <li>Join Affiliate</li>
+                    </ul>
+                </div>
+                <div class="footer-col-4">
+                    <h3>Follow Us</h3>
+                    <ul>
+                        <li>Facebook</li>
+                        <li>Youtube</li>
+                        <li>Twitter</li>
+                        <li>Instagram</li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+            <p class="copyright">Copyright 2023 -Red RedStore</p>
+        </div>
+    </div>
+
+    <script>
+        // Your validation logic using jQuery
+        $(document).ready(function () {
+            $("#myForm").validate({
+                rules: {
+                    name: {
+                        required: true
+                    },
+                    email: {
+                        required: true
+                    },
+                    subject: {
+                        required: true
+                    },
+                    message: {
+                        required: true
+                    }
+                },
+
+                messages: {
+                    name: {
+                        required: "please enter your name",
+                    },
+                    email: {
+                        required: "please enter your email",
+                    },
+                    subject: {
+                        required: "please enter your subject",
+                    },
+                    message: {
+                        required: "please enter your message",
+                    }
+                }
+            });
+        }); 
+    </script>
+</body>
+
+</html>
